@@ -15,6 +15,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.TextView;
 
 import com.example.xyzreader.R;
@@ -37,6 +38,26 @@ public class ArticleListActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+//        Slide slideOut = new Slide();
+//        slideOut.setDuration(1000);
+//        //slide to left
+//        slideOut.setSlideEdge(Gravity.LEFT);
+//        //slide out
+//        slideOut.setMode(Visibility.MODE_OUT);
+//
+//        Slide slideIn = new Slide();
+//        slideIn.setDuration(1000);
+//        //slide from right
+//        slideIn.setMode(Visibility.MODE_IN);
+//        //slide in
+//        slideIn.setSlideEdge(Gravity.RIGHT);
+
+        //implement shared element transition
+        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+//        getWindow().setEnterTransition(slideIn);
+//        getWindow().setExitTransition(slideOut);
+
         setContentView(R.layout.activity_article_list);
 
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
@@ -131,6 +152,9 @@ public class ArticleListActivity extends AppCompatActivity implements
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+//                    view.setTransitionName(getString(R.string.transition_photo));
+//                    ActivityOptions options = ActivityOptions
+//                            .makeSceneTransitionAnimation(ArticleDetailActivity.class, view, getString(R.string.transition_photo));
                     startActivity(new Intent(Intent.ACTION_VIEW,
                             ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
                 }

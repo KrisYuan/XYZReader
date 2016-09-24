@@ -11,7 +11,11 @@ import android.os.Bundle;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Explode;
+import android.transition.Slide;
+import android.transition.Visibility;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 
@@ -35,9 +39,28 @@ public class ArticleDetailActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Window window = getWindow();
+
+//        Slide slideOut = new Slide();
+//        slideOut.setDuration(500);
+//        //slide to left
+//        slideOut.setSlideEdge(Gravity.RIGHT);
+//        //slide out
+//        slideOut.setMode(Visibility.MODE_OUT);
+//
+//        Slide slideIn = new Slide();
+//        slideIn.setDuration(500);
+//        //slide from right
+//        slideIn.setMode(Visibility.MODE_IN);
+//        //slide in
+//        slideIn.setSlideEdge(Gravity.LEFT);
+
+        //implement shared element transition
+        window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+//        window.setEnterTransition(slideIn);
+//        window.setExitTransition(slideOut);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Window window = getWindow();
             window.getDecorView().setSystemUiVisibility(
                     View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
                             View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
