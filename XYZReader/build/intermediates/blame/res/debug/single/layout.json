@@ -80,12 +80,12 @@
         "source": "/Users/kris/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/design/24.0.0/res/layout/design_navigation_menu_item.xml"
     },
     {
-        "merged": "/Users/kris/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
-        "source": "/Users/kris/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/notification_template_part_time.xml"
-    },
-    {
         "merged": "/Users/kris/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
         "source": "/Users/kris/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/Users/kris/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/kris/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/layout/notification_template_part_time.xml"
     },
     {
         "merged": "/Users/kris/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
